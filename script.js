@@ -64,12 +64,12 @@ const submit = document.querySelector(".submit");
 const nameF = document.querySelector("#nameF");
 const email = document.querySelector("#email");
 const pass = document.querySelector("#pass");
-const result5 = document.querySelector("#Res5");
+const result5 = document.querySelector("#result5");
 
 submit.addEventListener("click", ()=> {
-    if (nameF.value.length >= 3) { //&&
-        //email.value.includes("@") &&
-        //pass.value.length >= 6) {
+    if (nameF.value.length >= 3 &&
+        email.value.includes("@") &&
+        pass.value.length >= 6) {
         location.href = "./second.html";
     } else {
         result5.textContent = "error";
